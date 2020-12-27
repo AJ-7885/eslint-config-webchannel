@@ -207,7 +207,7 @@ try `npx install-peerdeps --dev eslint-config-webchannel -Y`
 Start fresh. Sometimes global modules can goof you up. This will remove them all:
 
 ```
-npm remove --global eslint-config-webchannedl babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
+npm remove --global eslint-config-webchannel husky lint-staged stylelint stylelint-config-recommended  stylelint-config-styled-components  stylelint-processor-styled-components babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
 ```
 
 To do the above for local, omit the `--global` flag.
