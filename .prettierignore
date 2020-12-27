@@ -1,0 +1,16 @@
+.git
+.gitignore
+public/assets/**
+js/**
+node_modules/**
+*.json
+.nvmrc
+README.md
+.npmignore
+.prettierrc
+.prettierignore
+.scannerwork
+.eslintcache
+.eslintignore
+.editorconfig
+

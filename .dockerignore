@@ -1,0 +1,28 @@
+**/node_modules
+/.travis.yml
+/coverage
+/.scannerwork
+/.git
+/sonar-project.properties
+/infra/docker/Dockerfile
+/README.md
+/.gitignore
+/.dockerignore
+/.editorconfig
+/CODEOWNERS
+
+# Ignore NextJs files
+/out
+/.next
+
+# Ignore deployment related files
+/infra/k8s
+/infra/test
+
+# Ignore build files
+/build
+
+# Ignore in CI
+/.tmp
+/static-assets
+
