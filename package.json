@@ -1,0 +1,64 @@
+{
+    "name": "eslint-config-webchannel",
+    "description": "ESLint and Prettier Config from WebChannel.Dev",
+    "version": "0.1.0",
+    "keywords": [
+        "eslint",
+        "eslintconfig",
+        "javascript",
+        "ecmascript",
+        "lint",
+        "config",
+        "prettier"
+    ],
+    "private": false,
+    "license": "MIT",
+    "author": "https://github.com/AJ-7885",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AJ-7885/eslint-config-webchannel"
+    },
+    "bugs": {
+        "url": "https://github.com/AJ-7885/eslint-config-webchannel/issues"
+    },
+    "publishConfig": {
+        "registry": ""
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "peerDependencies": {
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.8.1",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-html": "^6.1.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.20.6",
+        "eslint-plugin-react-hooks": "^4.1.2",
+        "husky": "^4.3.6",
+        "lint-staged": "^10.5.3",
+        "prettier": "^2.2.1",
+        "stylelint": "^13.7.2",
+        "stylelint-config-recommended": "^3.0.0",
+        "stylelint-config-styled-components": "^0.1.1",
+        "stylelint-processor-styled-components": "^1.10.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.8.1",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-html": "^6.1.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.20.6",
+        "eslint-plugin-react-hooks": "^4.1.2",
+        "prettier": "^2.2.1"
+    }
+}
