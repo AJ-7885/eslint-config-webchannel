@@ -23,7 +23,7 @@
         "url": "https://github.com/AJ-7885/eslint-config-webchannel/issues"
     },
     "publishConfig": {
-        "registry": ""
+        "registry": "https://npm.pkg.github.com/@aj-7885"
     },
     "scripts": {
         "lint": "eslint .",
