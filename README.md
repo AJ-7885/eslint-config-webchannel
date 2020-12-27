@@ -1,4 +1,4 @@
-# WebChannel.DEV Eslint and Prettier Setup
+# WebChannel Eslint and Prettier Setup
 
 These are WebChannel.DEV settings for ESLint and Prettier
 
