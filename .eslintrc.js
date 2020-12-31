@@ -123,24 +123,8 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'es5',
-        singleQuote: true,
-        jsxSingleQuote: true,
-        semi: false,
-        tabWidth: 2,
-        bracketSpacing: true,
-        jsxBracketSameLine: false,
-        arrowParens: 'avoid',
-        printWidth: 80,
-        // below line only for windows users facing CLRF and eslint/prettier error
-        // non windows users feel free to delete it
-        endOfLine: 'auto',
-      },
-    ],
-    'jsx-a11y/href-no-hash': 'warn',
+    'prettier/prettier': 'error',
+    'jsx-a11y/href-no-hash': 0,
     'jsx-a11y/anchor-is-valid': [
       'warn',
       {
@@ -151,4 +135,4 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
   },
   plugins: ['html', 'prettier', 'react-hooks'],
-}
+};

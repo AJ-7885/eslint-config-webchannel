@@ -2,7 +2,7 @@ module.exports = {
     "processors": [
         "stylelint-processor-styled-components"
     ],
-    "extends": [
+       "extends": [
         "stylelint-config-recommended",
         "stylelint-config-styled-components"
     ],
@@ -10,4 +10,4 @@ module.exports = {
         "block-no-empty": null,
         "no-descending-specificity": null
     }
-}
+ }
