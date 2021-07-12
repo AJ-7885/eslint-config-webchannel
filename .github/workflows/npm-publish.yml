@@ -16,7 +16,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@aj-7885'
       - run: yarn install
-      - run: npm publish
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
