@@ -13,10 +13,10 @@ jobs:
             packages: write
         steps:
             - uses: actions/checkout@v2
-#               with:
-#                   token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-#             - run: git config --global user.name 'AJ'
-#             - run: git config --global user.email '42003122+code7885@users.noreply.github.com'
+              with:
+                  token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+            - run: git config --global user.name 'AJ'
+            - run: git config --global user.email '42003122+code7885@users.noreply.github.com'
             # Setup .npmrc file to publish to npm
 
             - uses: actions/setup-node@v2
@@ -26,10 +26,10 @@ jobs:
             - run: npm install
 
            
-            - name: Commit files
-              run: |
-                git config --local user.email "42003122+code7885@users.noreply.github.com"
-                git config --local user.name "AJ"
+#             - name: Commit files
+#               run: |
+#                 git config --local user.email "42003122+code7885@users.noreply.github.com"
+#                 git config --local user.name "AJ"
           #      git commit -m "Add changes" -a
             - name: Bump up the patch version 🕹️ -
               run: npm version patch -m " %$ " -f
