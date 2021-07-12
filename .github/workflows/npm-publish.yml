@@ -38,7 +38,7 @@ jobs:
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 branch: main
-            - run: git checkout main & git push
+#             - run: git checkout main & git push
             # # Publish to npm
             # - run: npm publish --access public
             #   env:
