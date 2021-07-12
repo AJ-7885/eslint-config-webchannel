@@ -15,8 +15,10 @@ jobs:
             - uses: actions/checkout@v2
               with:
                   token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-            - run: git config --global user.name ${{ secrets.GIT_NAME }}
-            - run: git config --global user.email ${{ secrets.GIT_EMAIL }}
+#             - run: git config --global user.name ${{ secrets.GIT_NAME }}
+#             - run: git config --global user.email ${{ secrets.GIT_EMAIL }}
+            - run: git config --global user.name 'AJ'
+            - run: git config --global user.email '42003122+code7885@users.noreply.github.com'
             # Setup .npmrc file to publish to npm
 
             - uses: actions/setup-node@v2
@@ -26,7 +28,7 @@ jobs:
             - run: npm install
 
             - name: Bump up the patch version 🕹️ -
-              run: npm version patch -m " %$ " -f
+              run: npm version patch -m " %s " -f
               
             - name: Push changes
               uses: ad-m/github-push-action@master
