@@ -11,12 +11,18 @@ jobs:
       packages: write 
     steps:
       - uses: actions/checkout@v2
+#       - uses: fregante/setup-git-user@v1
       # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v2
         with:
           node-version: '10.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
+     
+      - name: Bump up the patch version 🕹️ 
+        run: npm version patch -m "[RELEASE] %s"
+      - run: git push 
+      
       # Publish to npm
       - run: npm publish --access public
         env:
