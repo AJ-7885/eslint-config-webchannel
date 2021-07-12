@@ -33,7 +33,12 @@ jobs:
           #      git commit -m "Add changes" -a
             - name: Bump up the patch version 🕹️ -
               run: npm version patch -m " %$ " -f
-            - run: git checkout main
+            - name: git status
+              run: git status
+            - name: git branch
+              run: git status
+            - name: git checkout main
+              run: git checkout main
             - run: git push
               
 #             - name: Push changes
