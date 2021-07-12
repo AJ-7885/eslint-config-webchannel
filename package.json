@@ -1,7 +1,7 @@
 {
     "name": "eslint-config-webchannel",
     "description": "ESLint and Prettier Config from WebChannel.Dev",
-    "version": "0.1.62",
+    "version": "0.1.63",
     "keywords": [
         "eslint",
         "eslintconfig",
