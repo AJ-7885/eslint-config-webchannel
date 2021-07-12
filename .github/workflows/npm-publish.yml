@@ -26,7 +26,7 @@ jobs:
             - run: npm install
 
             - name: Bump up the patch version 🕹️
-              run: npm version patch -m "[RELEASE] %s"
+              run: npm version patch -m "[RELEASE] %s" -f
             - run: git push
             # # Publish to npm
             # - run: npm publish --access public
