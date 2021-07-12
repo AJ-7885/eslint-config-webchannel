@@ -9,8 +9,6 @@ You might like them - or you might not. Don't worry you can always change them.
 
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/AJ-7885/eslint-config-webchannel)
 
-
-
 <img src="https://www.commitstrip.com/wp-content/uploads/2020/06/Strip-Visual-Studio-Code-650-finalenglish.jpg"
 alt="Showreel" width="100%" border="10" />
 
