@@ -31,13 +31,15 @@ jobs:
                 git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
                 git config --local user.name "github-actions[bot]"
           #      git commit -m "Add changes" -a
-            - name: Bump up the patch version 🕹️
+            - name: Bump up the patch version 🕹️ -
               run: npm version patch -m " %$ " -f
+              
             - name: Push changes
               uses: ad-m/github-push-action@master
               with:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 branch: main
+                
 #             - run: git checkout main & git push
             # # Publish to npm
             # - run: npm publish --access public
