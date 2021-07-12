@@ -1,47 +1,45 @@
 name: Publishing packages to npm and GitHub Packages
 on:
-  push:
-    branches: publish
-  release:
-    types: # This configuration does not affect the page_build event above
-      - created
+    push:
+        branches: publish
+    release:
+        types: # This configuration does not affect the page_build event above
+            - created
 jobs:
-  build:
-    runs-on: ubuntu-latest 
-    permissions: 
-      contents: read
-      packages: write 
-    steps:
-      - uses: actions/checkout@v2
-        with:
-         token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-      - run: git config --global user.name 'AJ'
-      - run: git config --global user.email '42003122+code7885@users.noreply.github.com'
-#       - uses: fregante/setup-git-user@v1
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '10.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm install
-     
-      - name: Bump up the patch version 🕹️ 
-        run: npm version patch -m "[RELEASE] %s"
-      - run: git push 
-      
-      # Publish to npm
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v2
-        with:
-          registry-url: 'https://npm.pkg.github.com'
-          # Defaults to the user or organization that owns the workflow file
-#           scope: '@aj-7885'
-      # Publish to GitHub Packages
-      - run: echo "`jq '.name="@aj-7885/eslint-config-webchannel"' package.json`" > package.json
-      - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
- 
+    build:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+            packages: write
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+            - run: git config --global user.name 'AJ'
+            - run: git config --global user.email '42003122+code7885@users.noreply.github.com'
+            # Setup .npmrc file to publish to npm
+
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "10.x"
+                  registry-url: "https://registry.npmjs.org"
+            - run: npm install
+
+            - name: Bump up the patch version 🕹️
+              run: npm version patch -m "[RELEASE] %s"
+            - run: git push
+            # # Publish to npm
+            # - run: npm publish --access public
+            #   env:
+            #       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            # # Setup .npmrc file to publish to GitHub Packages
+            # - uses: actions/setup-node@v2
+            #   with:
+            #       registry-url: "https://npm.pkg.github.com"
+            #       # Defaults to the user or organization that owns the workflow file
+            #       scope: "@aj-7885"
+            # # Publish to GitHub Packages
+            # - run: echo "`jq '.name="@aj-7885/eslint-config-webchannel"' package.json`" > package.json
+            # - run: npm publish --access public
+            #   env:
+            #       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
