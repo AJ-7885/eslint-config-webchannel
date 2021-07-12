@@ -40,19 +40,19 @@ jobs:
                 github_token: ${{ secrets.GITHUB_TOKEN }}
                 branch: main
                 
-#             - run: git checkout main & git push
-            # # Publish to npm
-            # - run: npm publish --access public
-            #   env:
-            #       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-            # # Setup .npmrc file to publish to GitHub Packages
-            # - uses: actions/setup-node@v2
-            #   with:
-            #       registry-url: "https://npm.pkg.github.com"
-            #       # Defaults to the user or organization that owns the workflow file
-            #       scope: "@aj-7885"
-            # # Publish to GitHub Packages
-            # - run: echo "`jq '.name="@aj-7885/eslint-config-webchannel"' package.json`" > package.json
-            # - run: npm publish --access public
-            #   env:
-            #       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - run: git checkout main & git push
+            # Publish to npm
+            - run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            # Setup .npmrc file to publish to GitHub Packages
+            - uses: actions/setup-node@v2
+              with:
+                  registry-url: "https://npm.pkg.github.com"
+                  # Defaults to the user or organization that owns the workflow file
+                  scope: "@aj-7885"
+            # Publish to GitHub Packages
+            - run: echo "`jq '.name="@aj-7885/eslint-config-webchannel"' package.json`" > package.json
+            - run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
