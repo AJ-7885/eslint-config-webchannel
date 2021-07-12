@@ -1,5 +1,7 @@
 name: Publishing packages to npm and GitHub Packages
 on:
+  push:
+    branches: publish
   release:
     types: # This configuration does not affect the page_build event above
       - created
