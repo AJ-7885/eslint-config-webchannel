@@ -2,7 +2,7 @@ repo_name: AJ-7885/eslint-config-webchannel
 report_id: 997fe39ffc65c7df31f962a811e05cde
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:48:30+00:00'
+timestamp: '2024-02-29T18:40:45+00:00'
 requested_by: AJ-7885
 provider: github
 branch: main
@@ -92,7 +92,7 @@ tools:
   last_updated_by: AJ
   last_updated_on: 2021-07-12 22:22:02.000000000 Z
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 2.3.2
   license: MIT
